@@ -1,0 +1,211 @@
+@charset "utf-8";
+/*
+ * Copyright (c) 2010 GuangLin
+ * @Author: Cling
+ * @Date: 2011.02.11
+ */
+
+
+#haopai #haopaiLogo:hover { background-position:0 0;}
+
+/* Main Banner */
+#mainbanner { margin-bottom:10px; width:960px; height:228px;}
+#latestShow { float:left; display:inline; width:218px; height:228px;}
+#recommended { position:relative; float:right; width:732px; height:228px;}
+#recommendedPic a { display:block;}
+#recommended_bidder { position:absolute; z-index:10; top:0; right:3px; width:185px; text-align:center;}
+#recommended_bidder .countdown { margin-top:32px;}
+#recommended_bidder .price { margin-top:36px;}
+#recommended_bidder .bidder {}
+#recommended_bidder .bidder p { margin:5px 0 5px 0;}
+.bid { background-position:0 0;}
+.loginNow:hover { background-position:0 -110px;}
+.bidNow:hover { background-position:0 -55px;}
+
+
+/* news */
+#info {}
+#homenews li,
+#homeinfos li { overflow:hidden; padding:1px 0; height:16px; line-height:160%;}
+#homenews a:link    { color:#999999;;}
+#homenews a:visited   { color:#999999;}
+
+/* hotPeriod */
+#hotPeriod .content { padding:0;}
+.news_height {height:140px;background:#FFFFFF;}
+.hotPeriod_height {height: auto;overflow: hidden;min-height:181px;background:#FFFFFF;}
+.futureAuctions { padding:0 0 3px 5px; background:#fff; border-bottom:1px solid #ebebeb; cursor:pointer;}
+.futureAuctions .bidImg { display:none; float:left; width:50px; margin-right:3px;}
+.futureAuctions .normal { display:none;}
+.futureAuctions .bidDate { float:left; display:inline; margin:3px 0 0 5px;}
+.futureAuctions .bidDate a { overflow:hidden; float:left; display:inline; margin-right:5px; width:140px; height:15px;}
+.futureAuctions .bidDate span { float:left; display:inline;}
+.futureAuctions .bidDate .space { margin-right:0;}
+.futureAuctionsOn { padding:10px 0 10px 10px;  background-image:url("../images/common/sprite_auctionlist.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auctionlist.png*/; background-repeat:no-repeat; background-position:100% 0;}
+.futureAuctionsOn .bidImg { display:block;}
+.futureAuctionsOn .normal { display:inline;}
+.futureAuctionsOn .bidDate .space { margin-right:15px;}
+.futureAuctionsOn .haopaiPurchase { display:block;}
+.futureAuctionsOn .bidDate a { display:block; float:none; width:140px; height:30px;} 
+.futureAuctionsOn .bidDate span { float:none;}
+
+/* moreInfo */
+#moreInfo { float:left; display:inline; width:218px;}
+
+
+/* ad */
+.ad { margin-bottom:10px;}
+
+
+/* latest */
+#latest .LiveAuction { padding:20px 0 9px 10px; height:70px;}
+#latest .latestProImg { float:left; width:50px; height:37px;}
+#latest .detail { float:left; margin-left:10px; width:140px;}
+#latest .detail h3 { overflow:hidden;}
+
+
+/* link */
+#link {}
+#logoLink li { overflow:hidden; float:left; display:inline; padding:5px 0 5px 5px; width:100px; height:31px; text-align:center;}
+#textLink { padding:5px;}
+#textLink li { overflow:hidden; float:left; display:inline; padding:0 5px 0 5px; width:108px; height:16px; text-align:center;}
+#textLink li a { display:block; height:16px; line-height:16px;}
+
+/* moreAuctions */
+#moreAuctions { float:right; display:inline; margin-left:10px; padding-bottom:10px; width:730px;}
+
+/* ----------------------------------------------------------------------------------------------------
+ * slider style
+ * ----------------------------------------------------------------------------------------------------
+ */
+/*hot slider*/
+.bx-next {position:absolute;left:44px;bottom:0px;right:-50px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url("../script/bxslider/style/gray_next.png")/*tpa=http://game.haopai365.com/static/script/bxslider/style/gray_next.png*/ no-repeat 0 -30px;}
+
+/*previous button*/
+.bx-prev {position:absolute;bottom:0;left:0;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url("../script/bxslider/style/gray_prev.png")/*tpa=http://game.haopai365.com/static/script/bxslider/style/gray_prev.png*/ no-repeat 0 -30px;}
+
+/*pager links*/
+.bx-pager a {margin-right: 5px;color: #fff;padding: 3px 8px 3px 6px;font-size: 12px;zoom:1;background: url("../script/bxslider/style/gray_pager.png")/*tpa=http://game.haopai365.com/static/script/bxslider/style/gray_pager.png*/ no-repeat 0 -20px;}
+
+/*auto start button*/
+.bx-auto .start {background: url("../script/bxslider/style/gray_auto.png")/*tpa=http://game.haopai365.com/static/script/bxslider/style/gray_auto.png*/ no-repeat 0 2px;padding-left: 13px;}
+
+/*auto stop button*/
+.bx-auto .stop {background: url("../script/bxslider/style/gray_auto.png")/*tpa=http://game.haopai365.com/static/script/bxslider/style/gray_auto.png*/ no-repeat 0 -14px;padding-left: 13px;}
+
+/*
+ * End color scheme styles
+ */
+
+
+/*next/prev button hover state*/
+.bx-next:hover,
+.bx-prev:hover {background-position: 0 0;}
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {background-position: 0 0;}
+
+/*pager wrapper*/
+.bx-pager {text-align:center;padding-top: 7px;font-size:12px;color:#666;bottom:10px;right:10px;position:absolute;}
+
+/*captions*/
+.bx-captions {text-align:center;font-size: 12px;padding: 7px 0;color: #666;}
+
+/*auto controls*/
+.bx-auto {
+bottom: 8px;left: 93px;position: absolute;}
+
+.bx-auto a {color: #666;font-size: 12px;}
+
+#textLink {padding: 5px 10px;background:#fff;}
+#textLink li {display: inline;float: left;height: 16px;overflow: hidden;padding: 0 5px;}
+#textLink li a {display: block;height: 16px;line-height: 16px;}
+#textLink ul > li {width: 0;white-space: nowrap;}
+#textLink ul > li {width: auto;}
+
+
+
+/*game nav*/
+ #gamesNav .wordIndex li, #gamesNav .hot {
+    background: url("../images/common/gamebg.png")/*tpa=http://game.haopai365.com/static/images/common/gamebg.png*/ no-repeat scroll 0 0 transparent;
+}
+#gamesNav { height:auto;min-height: 144px;
+    position: relative; margin-bottom: 10px;
+    overflow: hidden;color: #404040;
+	width:960px;
+	}
+.navHeader {    
+	background-color: #EEF4FF;
+/*    color: #194B81;*/
+    font-size: 12px;
+    line-height: 25px;
+    padding-left: 10px;
+    vertical-align: top;
+    
+    background: url("../images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/ repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #F4F4F4;
+    clear: both;
+    
+	}
+
+#gamesNav .other-links {  
+	position: absolute;
+    right: 10px;
+    top: 7px;}
+#gamesNav .other-links a {
+    color: #194B81;
+    margin-left: 6px;
+}
+
+#gamesNav .wordIndex {
+    height: 17px;
+    overflow: hidden;
+    position: absolute;
+   	left:10px;
+    top: 5px;
+}
+#gamesNav .wordIndex li {
+    background-position: 3px -180px;
+    border-left: 1px solid #BDD2E9;
+    color: #194B81;
+    line-height: 17px;
+    text-align: center;
+    width: 22px;
+	float:left;
+	cursor:pointer;
+}
+#gamesNav .wordIndex .active {
+    background-position: 3px -160px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+#gamesNav .wordIndex .hot {
+    background-position: -166px -60px;
+    border: medium none;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: -1px;
+    position: relative;
+    width: 18px;
+    z-index: 1;
+}
+
+#gamesNav .navBody ul {
+    overflow: hidden;
+    padding: 10px 0 0 15px;
+/*    width: 733px;*/
+}
+#gamesNav .navBody li {
+    float: left;
+    width: 104px;
+}
+#gamesNav .navBody a {
+    color: #575757;
+    line-height: 2.1;
+}
+.h {
+    color: #FF5500 !important;
+}
+
+

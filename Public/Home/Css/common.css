@@ -1,0 +1,588 @@
+@charset "utf-8";
+/*
+ * Copyright (c) 2010 GuangLin
+ * @Author: Cling
+ * @Date: 2011.02.12
+ */
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Haopai common.css
+ * --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+
+/* ----------------------------------------------------------------------------------------------------
+ * Common setting
+ * ----------------------------------------------------------------------------------------------------
+ */
+html,body,iframe,div,span,
+dl,dt,dd,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+form,fieldset,legend,
+input,textarea,
+pre,code,p,blockquote,
+th,td { margin:0; padding:0;-webkit-text-size-adjust: none;}
+h1,h2,h3,h4,h5,h6 { font-size:100%;}
+a { text-decoration:none;}
+li { list-style:none;}
+table { border-collapse:collapse; border-spacing:0;}
+fieldset,img { border:none;}
+/*ie6 fix*/
+img, .close, .normal-close{ behavior: url("../Js/iepngfix.htc")/*tpa=http://game.haopai365.com/static/script/iepngfix.htc*/ }
+address,caption,em,th,var { font-style:normal; font-weight:normal;}
+caption,th { text-align:left;}
+
+html { background:#ffffff; color:#798B9B;}
+body,input,textarea,select { font-size:12px; font-family:Arial, sans-serif;-webkit-text-size-adjust: none;}
+input,textarea,select { color:#035A87;}
+body {word-wrap:break-word; word-break:break-all;}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ * patch
+ * ----------------------------------------------------------------------------------------------------
+ */
+.fl { float:left;}
+.fr { float:right;}
+.cb { clear:both;}
+.cl { clear:left;}
+.cr { clear:right;}
+.tl { text-align:left;}
+.tr { text-align:right;}
+.tc { text-align:center;}
+.vab { vertical-align:baseline;}
+.vam { vertical-align:middle;}
+.sup { vertical-align:text-top;}
+.sub { vertical-align:text-bottom;}
+.displayNone { display:none;}
+.displayBlock { display:block;}
+.clearfix:after { content:" "; display:block; clear:both; height:0; visibility:hidden;zoom:1;}
+.clearfix { zoom:1;}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ * font and list style
+ * ----------------------------------------------------------------------------------------------------
+ */
+.f09 { font-size:9px;}
+.f10 { font-size:10px;}
+.f11 { font-size:11px;}
+.f12 { font-size:12px;}
+.f14 { font-size:14px;}
+.f16 { font-size:16px;}
+.f18 { font-size:18px;}
+.f20 { font-size:20px;}
+.f22 { font-size:22px;}
+.f24 { font-size:24px;}
+.f26 { font-size:26px;}
+.f28 { font-size:28px;}
+.f30 { font-size:30px;}
+.f36 { font-size:36px;}
+.f38 { font-size:38px;}
+.f40 { font-size:40px;}
+.f48 { font-size:48px;}
+.f50 { font-size:50px;}
+
+/* font family */
+.fmMBold {font-family:'微软雅黑', '黑体',Arial, Helvetica, sans-serif;}
+.fmMingLiU { font-family:MingLiU; font-size:11px;}
+
+/* Special font color */
+.keyword { color:#f60;}
+.required { color:#f60;}
+.error { color:#C3013D;}
+.text { color:#035A87;}
+.notice { color:#798B9B;}
+
+/* Product Attribute*/
+.price { color:#39b8a8;}
+.worth { text-decoration:line-through;}
+.normal { color:#000;}
+.purchase { color:#369A28;}
+.countdown { font-weight:bolder; color:#000;}
+.saveing { color:#369A28;}
+
+/* separator | */
+.separator { margin:0 5px; font-size:11px; color:#D4D4D4;}
+.space { margin-right:15px;}
+
+/* Global Link setting */
+a:link    { color:#035A87;}
+a:visited { color:#035A87;}
+a:hover   { color:#ff6600; text-decoration:underline;}
+
+/* whiteLink */
+.whiteLink a:link    { color:#FFFFFF;}
+.whiteLink a:visited { color:#FFFFFF;}
+.whiteLink a:hover   { color:#ff6600;}
+
+/* blueLink */
+.blueLink a:link    { color:#0072C1;}
+.blueLink a:visited { color:#0072C1;}
+.blueLink a:hover   { color:#ff6600;}
+
+
+/* keyword */
+a.keyword:link    { color:#f60;}
+a.keyword:visited { color:#0093EA;}
+a.keyword:hover   { color:#f60; text-decoration:underline;}
+
+/* userName */
+a.userName:link  { color:#ffa107;cursor:default;}
+a.userName:visited { color:#ffa107;cursor:default;}
+a.userName:hover { color:#ffa107;cursor:default;text-decoration:none;}*/
+/*a.userName:visited { color:#0093EA;}
+a.userName:hover { color:#ff6600;}*/
+
+/* ul ol */
+.disc,.cirl { line-height:160%;}
+.disc li,
+.cirl li,
+.cirl li { list-style-position:inside;}
+.inside li { list-style-position:inside;}
+.outside li { list-style-position:outside;}
+.disc li { list-style-type:disc;}
+.cirl li { list-style-type:circle;}
+.deci li { list-style-type:decimal;}
+.paragraph { padding:0 10px; margin-bottom:10px; line-height:160%;}
+.strong { font-weight:bolder;}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ * layout
+ * ----------------------------------------------------------------------------------------------------
+ */
+.page960  { clear:both; margin:0 auto; width:960px;}
+/*.homepage { background:url("/static/images/common/page_bg.png") repeat-x top;}*/
+/*.subpage  { background:url("/static/images/common/page_bg.png") repeat-x top;}*/
+.mainbody { margin:0 auto; padding:10px;width:960px; min-height:340px; background:#fff;}
+.sidebarWrap { width:218px;}
+.contentWrap { width:730px;}
+#subpageBanner { overflow:hidden; margin-bottom:10px; height:120px;}
+
+/* header */
+#header { position:relative; z-index:8888; margin:0 auto; width:980px;}
+#header .separator { color:#666;}
+
+/* logo */
+#haopaiLogo { overflow:hidden; float:left; display:block; padding-top:55px; width:260px; height:0; background-image:url("../Images/common/haopai_logo.png")/*tpa=http://game.haopai365.com/static/images/common/haopai_logo.png*/; background-position:0 0; background-repeat:no-repeat;}
+
+/* user information */
+#userInfo { position:absolute; z-index:9999; top:14px; right:0; width:600px;}
+#userInfo h3 { font-weight:normal; cursor:pointer;}
+#userInfo h3 span { padding-left:3px; font-size:7px; color:#000; vertical-align:middle!important; vertical-align:baseline;}
+#userInfo ul { float:right; display:inline;}
+#userInfo li { position:relative; float:left; display:inline; padding:0 8px 0 8px; line-height:217.875%;}
+#userInfo .dropMenu { position:relative;}
+#userInfo .dropMenuBox { position:absolute; z-index:1201; top:27px; right:0; display:none; padding:5px 15px 15px 15px; background:#000;}
+
+/* account info */
+.accountMenu {display:none;position:absolute;background-color:#c2d0da;background:url("../Images/common/white.png")/*tpa=http://game.haopai365.com/static/images/common/white.png*/ no-repeat;z-index:15000;padding-top:15px;padding-left:20px;color:#494949;width:189px;height:102px;font-size:13px;font-weight:bold;line-height:20px;right:0;top:35px;}
+#loginNav li { float:left; display:inline; padding:0 5px;}
+
+/* mainNav */
+#mainNav { clear:both; overflow:hidden; width:980px; height:51px;background-image:url("../Images/common/mainNav_bg.png")/*tpa=http://game.haopai365.com/static/images/common/mainNav_bg.png*/;}
+#mainNav .mainNavMenu { display:block;height:51px; line-height:50px;font-size:13px; color:#6c6c6c;font-weight:bold; text-align:center;}
+#mainNav ul li { position:relative; float:left; display:inline;text-align:center;}
+#mainNav ul li a:hover { color:#f60; text-decoration:none;}
+#mainNav .mainNav_1 { width:84px; padding-left:12px; background-position:0 0;}
+.mainNav_2 { width:122px;}
+.mainNav_3 { width:135px;}
+.mainNav_4 { width:122px;}
+.mainNav_5 {margin-left: 44px;width: 412px;margin-top:13px;height:50px;}
+.mainNav_6 { background-position:-614px 0;}
+.mainNav_7 { background-position:-736px 0;}
+.mainNav_8 { background-position:-858px 0;}
+.search_keyword {width:412px;height:23px;line-height:24px; border: 0 none;outline: medium none;}
+#mainNav .serBtn {background: url("../Images/common/btn_search.png")/*tpa=http://game.haopai365.com/static/images/common/btn_search.png*/ no-repeat scroll 0 0 transparent; border: 0 none;cursor: pointer;width: 36px;height:26px; margin-left: 1px;margin-top: 12px}
+
+/* footer */
+#footer { clear:both; padding:0 0 10px 0; text-align:center;overflow:hidden;}
+#footerMenu {padding:5px 10px; width:940px;background:#494949;}
+
+.footerline {padding:5px 10px; width:940px;}
+.footerCicp {background:#C31A1F;color:#FFFFFF;}
+.footerCcopy {background:#E6320D;color:#FFFFFF;}
+
+
+#footerInfo { line-height:160%;}
+
+#footicon ul {margin:auto;width:285px;text-align:center;}
+#footicon li { float:left; display:inline; margin:0 5px;}
+.icpIcon { overflow:hidden; display:block; padding-top:41px;background-repeat:no-repeat;}
+.icpA { background-image:url("../Images/common/icon_a.gif")/*tpa=http://game.haopai365.com/static/images/common/icon_a.gif*/;width:34px;height:42px;}
+.icpB { background-image:url("../Images/common/icon_b.gif")/*tpa=http://game.haopai365.com/static/images/common/icon_b.gif*/;width:34px;height:42px;}
+.icpC { background-image:url("../Images/common/icon_c.gif")/*tpa=http://game.haopai365.com/static/images/common/icon_c.gif*/;width:34px;height:42px;}
+.icpD { background-image:url("../Images/common/icon_green.gif")/*tpa=http://game.haopai365.com/static/images/common/icon_green.gif*/;width:156px;height:46px;}
+.icpE { background-image:url("../Images/common/icon_red.gif")/*tpa=http://game.haopai365.com/static/images/common/icon_red.gif*/;width:156px;height:46px;}
+.icpF { background-image:url("../Images/payment/yeepay_logo.gif")/*tpa=http://game.haopai365.com/static/images/payment/yeepay_logo.gif*/;width:142px;height:42px;}
+
+#copyright { clear:both; margin-right:20px;}
+#copyright,#powerby { font-size:11px;}
+#service { clear:both; margin:0px auto; line-height:200%;background:#EBEBEB;}
+#service p strong { color:#3BB69A;}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ * common apple dialog 
+ * ----------------------------------------------------------------------------------------------------
+ */
+
+/* the overlayed element */
+.apple_overlay {display:none;background:url("../Js/prompt/white.png")/*tpa=http://game.haopai365.com/static/script/prompt/white.png*/ no-repeat;width:400px;	padding:35px;position: fixed; z-index: 10000;}
+
+/* default close button positioned on upper right corner */
+.normal-close {background-image:url("../Js/prompt/close.png")/*tpa=http://game.haopai365.com/static/script/prompt/close.png*/;position:absolute; right:5px; top:5px;cursor:pointer;height:35px;width:35px;}
+.apple_overlay .close {background-image:url("../Js/prompt/close.png")/*tpa=http://game.haopai365.com/static/script/prompt/close.png*/;position:absolute; right:5px; top:5px;cursor:pointer;height:35px;width:35px;}
+.apple_overlay.black {background-image:url("../Js/prompt/transparent.png")/*tpa=http://game.haopai365.com/static/script/prompt/transparent.png*/;color:#fff;}
+.apple_overlay h2 {margin:10px 0 -9px 0;font-weight:bold;font-size:14px;}
+.apple_overlay.black h2 {color:#fff;}
+
+/* ----------------------------------------------------------------------------------------------------
+ * prompt success 
+ * ----------------------------------------------------------------------------------------------------
+ */
+#successTip {display:none;background-color: #000000;color:#FFFFFF;position: fixed;top:0; z-index: 20000;padding:5px; width:980px;left:50%;margin-left:-490px;height:123px;opacity: 0.85;}
+#successTip .close {background-image:url("../Js/prompt/close.png")/*tpa=http://game.haopai365.com/static/script/prompt/close.png*/;position:absolute; right:10px; top:5px;cursor:pointer;height:35px;width:35px;}
+#successTip h2 {font-size:160%;}
+#successTip .title {font-size:16px;padding-left:15px;height:30px;font-weight:bold;}
+#successTip .ad {width:auto;float:left;height:110px;}
+#successTip .details {overflow:hidden;height:110px;padding-right:30px;padding-left:10px;padding-top:30px;}
+
+
+ 
+/* ----------------------------------------------------------------------------------------------------
+ * common icon settings
+ * ----------------------------------------------------------------------------------------------------
+ */
+.sprite,
+.onError,.onCorrect,.onFocus,.onShow,.onLoad
+{ background-image:url("../Images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/; background-repeat:no-repeat;}
+
+/* Form Validator */
+.onError,.onCorrect,.onFocus,.onShow,.onLoad { padding-left:16px;}
+.onError   { background-position:0 -1288px; color:#C3013D;}
+.onCorrect { background-position:0 -1303px; color:#42A313;}
+.onFocus   { background-position:0 -1348px; color:#0093EA;}
+.onTips    { background-position:0 -1333px; color:#f60;}
+.onShow    { background-position:0 -1318px; color:#B7C0C8;}
+.onLoad    { background-position:0 -1363px; color:#8a8a8a;}
+
+/* member common wrap */
+.mbWrap label { display:block; margin-bottom:3px;}
+.mbWrap h1 { margin-bottom:5px; font-size:14px;}
+.mbWrap h3 { margin-top:20px; color:#000;}
+.mbWrap .inputWrap { margin:5px 15px 0px 0px;}
+
+/* point */
+#cardType {background:#fff;border:solid 1px #F3F3F3;padding:10px 0px;}
+#cardType li { float:left; display:inline; margin:3px; width:352px; text-align:center;}
+#cardType li img {margin-bottom:1px; cursor:pointer;}
+.paymentType li { float:left; margin:5px 0px; text-align:center;}
+.paymentType label { display:inline;}
+.paymentType img { margin-bottom:5px; cursor:pointer;}
+#gotoBuy { clear:both; margin:15px 0 5px 0;}
+#payinfotext { margin-bottom:15px;}
+#buyType-selected { font-size:14px; margin-bottom:10px;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * component.css
+ * --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+.container,
+.skin .button,
+#proThumbnails ul li a,
+#refreshPage {-moz-border-radius:3px;-webkit-border-radius:3px;}
+.mainbody,
+.tab a {-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;-webkit-border-top-left-radius:3px;-webkit-border-top-right-radius:3px;}
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+ * Container and tab settings
+ * ----------------------------------------------------------------------------------------------------
+ */
+.container { margin-bottom:10px; border:1px solid #ebebeb;}
+.container .tabview { clear:both; padding:2px 0 22px 0; border-bottom:1px solid #f4f4f4;; background:url("../Images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/ repeat-x 0 0;}
+.container .title { display:inline; margin:0 8px 0 8px; line-height:1.7!important; line-height:1.8; font-size:12px; font-weight:bolder; color:##494949;;}
+.container .content {padding:10px;}
+.tab { padding-right:2px;}
+.tab li { float:left; display:inline; margin:4px 0 0 2px;}
+.tab h2 { font-weight:normal;}
+.tab a { display:block; padding:2px 8px; line-height:13px; border:1px solid #999999; border-bottom:none; background:url("../Images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/ repeat-x 0 -90px; color:#666666; cursor:pointer;}
+.title a:link{color:#494949;;}
+.title a:visited{color:#494949;;}
+.tab a:hover { border-color:#999999; background-position:0 0; text-decoration:none;}
+.tab .on a { border-color:#999999; border-bottom:1px solid #fff; background:#fff; color:#666666;}
+.tab .on a:hover { border-color:#999999; border-bottom:1px solid #fff;}
+
+/* form common settings */
+.input { padding:2px; border:1px solid #A0A0A0; height:15px;}
+.input-hover { background:#ffc;}
+.input-focus { border-color:#86C5E3; background:#ffc;}
+.input-disabled { border-color:#ccc; background:#f9f9f9; color:#A6A6A6;}
+.select { border:1px solid #cccccc; height:21px;}
+.checkbox,.radio { margin-right:3px; margin-top:-3px; vertical-align:middle;}
+.textarea { padding:2px; border:1px solid #A0A0A0;}
+.textarea-hover { background:#ffc;}
+.textarea-focus { border-color:#86C5E3; background:#ffc;}
+.textarea-disabled { border-color:#ccc; background:#f9f9f9; color:#A6A6A6;}
+
+/* button */
+.button { display:-moz-inline-box; display:inline-block; vertical-align:text-bottom;}
+.button .first-child { display:block; display:inline-block;}
+.button button,.button a { display:block; display:inline-block; border:none;}
+.button button { overflow:visible; background-color:transparent; cursor:pointer; font-size:12px;}
+.button a { text-decoration:none;}
+
+.skin .button { margin:auto 0.25em; border:1px solid #8DA6C3; background:url("../Images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/ repeat-x 0 0;}
+.skin .button a { line-height:2.2;}
+.skin .button button,
+.skin .button a,
+.skin .button a:visited { float:left; padding:0 10px 0 12px; height:2.5em; line-height:2.2; color:#035A87;}
+.skin .button-hover   { border-color:#86C5E3; background-position:0 -90px;}
+.skin .button-hover .first-child  { border-color:#86C5E3;}
+.skin .button-focus   { border-color:#86C5E3; background-position:0 -270px;}
+.skin .button-focus .first-child  { border-color:#86C5E3;}
+.skin .button-active  { border-color:#304369; background-position:0 -270px;}
+.skin .button-active .first-child { border-color:#304369; color:#fff;}
+
+
+
+.skin .button-green { border-color:#5a8e1d; background:url("../Images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/ repeat-x 0 -750px;}
+.skin .button-green .first-child { border-color:#5a8e1d;}
+.skin .button-green button,
+.skin .button-green a,
+.skin .button-green a:visited { color:#f4f4f4;}
+.skin .button-green-hover   { border-color:#8EC66D; background-position:0 -630px;}
+.skin .button-green-hover .first-child  { border-color:#8EC66D;}
+.skin .button-green-focus   { border-color:#8EC66D; background-position:0 -810px;}
+.skin .button-green-focus .first-child  { border-color:#8EC66D;}
+.skin .button-green-active  { border-color:#8EC66D; background-position:0 -810px;}
+.skin .button-green-active .first-child { border-color:#8EC66D;}
+
+.skin .button-hilite { border-color:#b01210; background:url("../Images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/ repeat-x 0 -720px;}
+.skin .button-hilite .first-child { border-color:#b01210;}
+.skin .button-hilite button,
+.skin .button-hilite a,
+.skin .button-hilite a:visited { color:#f4f4f4;}
+.skin .button-hilite-hover   { border-color:#8EC66D; background-position:0 -630px;}
+.skin .button-hilite-hover .first-child  { border-color:#8EC66D;}
+.skin .button-hilite-focus   { border-color:#8EC66D; background-position:0 -810px;}
+.skin .button-hilite-focus .first-child  { border-color:#8EC66D;}
+.skin .button-hilite-active  { border-color:#8EC66D; background-position:0 -810px;}
+.skin .button-hilite-active .first-child { border-color:#8EC66D;}
+
+.skin .split-button a { background-image:url("../Images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/; background-position:right -1512px; background-repeat:no-repeat;}
+.skin .split-button-focus a { background-position:right -1562px;}
+.skin .split-button-hover a { background-position:right -1562px;}
+.skin .split-button-activeoption { border-color:#ccc; background-position:0 0;}
+.skin .split-button-activeoption a { background-position:right -1612px;}
+.skin .split-button-disabled a { background-position:right -1612px;}
+
+.skin .button-disabled { border-color:#ccc; background-position:0 -180px;}
+.skin .button-disabled .first-child { border-color:#ccc;}
+.skin .button-disabled button,
+.skin .button-disabled a,
+.skin .button-disabled a:visited { color:#A6A6A6; cursor:default;}
+.sendReq { border:none; width:34px; height:21px; background:url("../Images/common/sprite_auction.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auction.png*/ no-repeat -119px -185px; cursor:pointer;}
+.sendReq2 { border:none; width:58px; height:21px; background:url("../Images/common/sprite_auction.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auction.png*/ no-repeat -119px -208px; cursor:pointer;}
+
+/* special auction button */
+#haopai .auctionButton .button { border:none; background:none;}
+#haopai .auctionButton .bidImgButton { display:block; padding:0; width:96px; height:33px; background-image:url("../Images/common/sprite_auction.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auction.png*/; background-repeat:no-repeat; background-position:0 -230px; cursor:pointer;}
+#haopai .auctionButton .button-hover { border:none;}
+#haopai .auctionButton .first-child  { border:none;}
+#haopai .auctionButton .button-hover .bidImgButton_live     { background-position:0 -272px;}
+#haopai .auctionButton .button-disabled .bidImgButton_ended { background-position:0 -314px;cursor:default;}
+#haopai .auctionButton .bidImgButton_download               { background-position:0 -398px;}
+#haopai .auctionButton a.bidImgButton_download:hover        { background-position:0 -440px;}
+#haopai .auctionButton .bidImgButton_remind           { background-position:0 -482px;}
+#haopai .auctionButton a.bidImgButton_remind:hover    { background-position:0 -524px;}
+#haopai .auctionButton .button-hover .bidImgButton_login    { background-position:0 -356px;}
+#haopai .auctionButton .button_seller          { background-position:0 -659px;}
+#haopai .auctionButton a.button_seller:hover        { background-position:0 -701px;}
+/*small special button*/
+#bidNowList .auctionButton .bidImgButton {
+background:url("../Images/common/sprite_auction.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auction.png*/ no-repeat 0 -485px;cursor:pointer;display:block;height:24px;margin-top:23px;padding:0;width:64px;}
+
+#bidNowList .auctionButton .button-hover .bidImgButton_live     { background-position:0 -514px;}
+#bidNowList .auctionButton .button-disabled .bidImgButton_ended { background-position:0 -543px;cursor:default;}
+/* ----------------------------------------------------------------------------------------------------
+ * User Icon
+ * ----------------------------------------------------------------------------------------------------
+ */
+.userID { margin:0 auto 5px auto; width:80px; text-align:center;}
+.userIcon { cursor:default;display:block; margin:0 auto 3px auto; width:58px; height:58px; background:url("../Images/common/sprite_auctionlist.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auctionlist.png*/ -520px -640px no-repeat;}
+.userIcon img { margin-top:3px; margin-left:-2px;}
+.userName { line-height:15px;}
+#bidnow .userName {color:#ff5200; line-height:15px;}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ * Product List
+ * ----------------------------------------------------------------------------------------------------
+ */
+.proImg {height:75px;margin-left:auto;margin-right:auto;margin-top:2px;width:100px;}
+.auTitle{height:20px;margin-left:auto;margin-right:auto;margin-top:3px;width:auto;color:#494949;font-weight:bold;text-align:center;}
+/* Vertical */
+.AuctionVER { position:relative; float:left; display:inline; margin:10px 0 0 10px; width:170px; height:290px; text-align:center; background-image:url("../Images/common/sprite_auctionlist.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auctionlist.png*/; background-repeat:no-repeat; background-position:0 -640px;}
+.AuctionVER h3 { overflow:hidden; padding:0 10px; height:31px; font-weight:normal; overflow: hidden;}
+.AuctionVER .price { height:26px;}
+.AuctionVER .detail {height:35px;}
+.AuctionVER .detail strong { margin-top:10px;}
+.AuctionVER .detail .price { display:block;}
+.AuctionVER .button { margin:5px auto 5px auto;}
+.AuctionVER .bidder { margin-top:3px;}
+
+.AuctionVER .newTag-small {background:url("../Images/common/sprite_auction.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auction.png*/ no-repeat scroll 0px -74px;height:74px;left:0px;position:absolute;top:22px;width:68px;z-index:6;}
+.AuctionVER .hotTag-small {background:url("../Images/common/sprite_auction.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auction.png*/ no-repeat scroll 0px 0px;height:74px;left:0px;position:absolute;top:22px;width:68px;z-index:6;}
+.newTag-big {background:url("../Images/common/sprite_auction.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auction.png*/ no-repeat scroll -242px -172px;height:172px;left:0px;position:absolute;top:0;width:158px;z-index:6;}
+.hotTag-big {background:url("../Images/common/sprite_auction.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auction.png*/ no-repeat scroll -242px 0px;height:172px;left:0px;position:absolute;top:0px;width:158px;z-index:6;}
+
+/* Auction State */
+.LiveAuction,
+.WinAuction,
+.EndAuction  { background-image:url("../Images/common/sprite_auctionlist.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auctionlist.png*/; background-repeat:no-repeat;}
+.LiveAuction { background-position:100% 0;}
+.WinAuction  { background-position:100% -200px;}
+.EndAuction  { background-position:100% -100px;}
+.bidButton { position:relative; text-align:center;}
+.bidtips { position:absolute; z-index:1000; top:-8px; right:0; display:none; width:100%;}
+
+/* latest ShowPic */
+#latestShowPic {}
+.showPicWrap { float:left; display:inline; margin:10px 0 5px 15px; width:460px;}
+.showPicWrap .userID { float:left; margin-top:50px;}
+.showPicContent { float:left; padding:15px 0 0 27px; width:350px; height:300px; background:url("../Images/common/sprite_auctionlist.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auctionlist.png*/ 0 -1220px no-repeat;}
+.showPicContent ul { clear:both; height:115px;} 
+.showPicContent li { display:inline; float:left; margin:0 0 5px 0; padding:5px; text-align:center;}
+.showPicContent li a {  display:table-cell!important; display:block; width:100px; height:100px; vertical-align:middle; text-align:center;}
+.showPicContent h3 { margin-bottom:5px; font-weight:normal;}
+.showPicContent h4 { margin-bottom:5px;}
+.showPicContent p.notice { overflow:hidden; margin-bottom:15px; padding:0 5px; height:45px;}
+.unShowPicWrap { clear:both; margin:0 auto 10px auto; padding:10px; width:920px;}
+.unShowPicWrap dl { float:left; width:180px;}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ * Haopai common Pages tag
+ * ----------------------------------------------------------------------------------------------------
+ */
+.pages {padding:5px; font-size:11px;font-family:Tahoma;width:300px;height:auto;margin:auto;}
+.pages a,.pages span { display:block; float:left; display:inline; font-size:11px;}
+.pageNum { padding:1px 0; width:20px;text-align:center;}
+.currentPage { padding:1px 0; width:25px;text-align:center;font-weight:bolder;}
+
+.firstPage,
+.lastPage,
+.prevPage,
+.nextPage,
+.morePages{ margin:2px; background-image:url("../Images/common/sprite_skin.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_skin.png*/; background-repeat:no-repeat; text-align:center;}
+
+.firstPage,
+.lastPage,
+.prevPage,
+.nextPage,
+.morePages { width:13px; height:11px;}
+
+.firstPage       { background-position:0 -1110px;}
+.firstPage:hover { background-position:-13px -1110px;}
+.lastPage        { background-position:0 -1121px;}
+.lastPage:hover  { background-position:-13px -1121px;}
+.prevPage        { background-position:0 -1132px;}
+.prevPage:hover  { background-position:-13px -1132px;}
+.nextPage        { background-position:0 -1143px;}
+.nextPage:hover  { background-position:-13px -1143px;}
+.morePages       { background-position:0 -1154px;}
+.morePages:hover { background-position:-13px -1154px;}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ * chart
+ * ----------------------------------------------------------------------------------------------------
+ */
+.chart { border:1px solid #F3F3F3; width:100%;background:#ffffff;}
+.chart th,
+.chart td { padding:3px; border:1px solid #F3F3F3; vertical-align:middle;}
+.chart th { background:#F3F3F3; color:#035A87;}
+
+.t_normal {}
+.t_important {color:#d60000;}
+
+/* ----------------------------------------------------------------------------------------------------
+ * activity setting
+ * ----------------------------------------------------------------------------------------------------
+ */
+#applyFrame {position:fixed; top:15%; z-index: 15000;width:752px;left:50%;margin-left:-376px;height:443px;display:none;}
+
+.bubbleDiv{
+    width: 90%;
+    margin: 0 auto;
+    height: 600px;
+    background: white;
+}
+.bubbleItem{
+    width: 100%;
+}
+.bubble{
+    max-width: 655px;
+    position: relative;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 7px;
+    margin-top: 15px;
+    padding-right: 10px;
+    display: inline-block;
+}
+.leftBubble{
+    position: relative;
+    margin-left: 25px;
+    border: 1px solid #00b6b6;
+    background-color: #f8fdfc;
+}
+.leftBubble .bottomLevel{
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-top: 10px solid #00b6b6;
+    border-left: 10px solid transparent;
+}
+.leftBubble .topLevel{
+    position: absolute;
+    top: 11px;
+    left: -8px;
+    border-top: 10px solid #f8fdfc;
+    border-left: 10px solid transparent;
+    z-index: 100;
+}
+.rightBubble{
+    position: relative;
+    margin-right: 25px;
+    float: right;
+    border: 1px solid #aaa;
+}
+.rightBubble .bottomLevel{
+    position: absolute;
+    bottom: 11px;
+    right: -10px;
+    border-bottom: 10px solid #aaa;
+    border-right: 10px solid transparent;
+}
+.rightBubble .topLevel{
+    position: absolute;
+    bottom: 12px;
+    right: -8px;
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    z-index: 100;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}

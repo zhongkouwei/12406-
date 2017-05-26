@@ -1,0 +1,107 @@
+@charset "utf-8";
+/*
+ * Copyright (c) 2010 GuangLin
+ * @Author: Cling
+ * @Date: 2011.02.11
+ */
+
+/* ----------------------------------------------------------------------------------------------------
+ * Auction Style
+ * ----------------------------------------------------------------------------------------------------
+ */
+#auctionDetail { position:relative;}
+
+/* bid now */
+#bidNowList { clear:both; margin:10px 0px 10px 13px;border:0;}
+.bidNow {width:225px;height:142px;height:152px !important;display:inline;padding-right:10px; background:url("../images/common/sprite_auctionlist.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auctionlist.png*/ 0 -970px repeat-x;}
+.bidNowTitle { margin:10px 20px 5px; font-weight:normal; height:38px; line-height:120%;}
+.bidNowTitle span { margin-left:10px;}
+.bidNowInfo .price { margin-bottom:5px;}
+.bidNowInfo .userName {}
+.bidNowBtn { display:inline; margin:0px;}
+
+/*recomend product*/
+.recomendBar {width:225px;height:142px;height:152px !important;display:inline;padding-right:10px; background:url("../images/common/sprite_auctionlist.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auctionlist.png*/ 0 -970px repeat-x;}
+.recomendLeft {width:120px;height:115px;float:left;display:inline;}
+.recomendRight {width:95px;height:115px;line-height:18px;padding-top:10px;float:left;text-align:right;font-size:12px;font-weight:580;display:inline;}
+.recomendThum { display:inline; margin:5px 20px 10px 10px; width:50px; height:65px;}
+
+/* product silde bar */
+#slideshow {width:420px; height:352px; position:relative; float:left; display:inline; margin:10px 0 0 10px; text-align:center;}
+#proImage { overflow:hidden; padding:10px; width:400px; height:300px;}
+#proThumbnails { position:absolute; left:0; bottom:10px;}
+#proThumbnails ul li { float:left; display:inline; margin:0 0 0 10px;width:58px;height:50px;}
+#proThumbnails ul li a { display:block; padding:5px 3px; border:1px solid #ebebeb; background:#fff;}
+#proThumbnails ul li img { opacity:0.3;}
+#proThumbnails ul li a:hover img { opacity:1;}
+
+/* bidInfo */
+#bidInfo { position:relative; float:right; display:inline; margin:10px 10px 10px 0; padding:10px; width:484px; height:332px;}
+#bidInfo .bidder p { margin-bottom:3px;}
+#bidInfo .bidder span { float:left; display:inline; width:73px; padding-right:3px; text-align:right;}
+#bidInfo .bidder strong { float:left; display:inline;}
+#bidnow { float:left; width:200px; height:330px; text-align:center;}
+#bidnow .userID { margin:10px auto; width:140px;}
+#bidnow .bidButton { clear:both; margin:5px auto 10px; width:100px;}
+#bidHistory { float:right; margin-bottom:0; width:278px;height:254px;margin-top:5px;}
+#mybidHistoryList { height:204px;}
+#mybidHistoryList .chart { margin-bottom:10px;}
+#mybidHistoryList .chart th { padding:1px 3px;}
+#bidHistoryList th { padding:1px 4px;}
+#bidHistoryList td { padding:1px 4px;}
+#bidHistoryList td a { overflow:hidden; display:block; width:68px; height:16px;}
+#mybidHistoryList th { padding:4px;}
+#mybidHistoryList td { padding:4px;}
+#bidHistoryList .pages { display:none;}
+
+/* saveBuy */
+#saveBuy { clear:both; margin-bottom:0;}
+#saveBuy .pages { padding:10px 0 0 0;}
+#buyitnow { float:left; width:220px; text-align:center;}
+#buyitnow .cb { margin-top:10px;}
+#auctionAd { float:right; display:inline; margin:0; width:280px;}
+/* product description */
+#description { /*line-height:180%;*/}
+#description table { width:930px;}
+
+
+/* product list */
+#productList { margin-bottom:0;}
+#productList .AuctionAttributes { position:absolute; top:0; right:0;}
+#productList .AuctionHOR { background:url("../images/common/sprite_auctionlist.png")/*tpa=http://game.haopai365.com/static/images/common/sprite_auctionlist.png*/ no-repeat 100% -400px;}
+#productList .AuctionHOR .AuctionAttributes { top:11px; right:10px; width:128px;}
+#productList .proImg { position:relative; float:left; display:inline; margin:0; padding:10px 20px;} 
+#productList .detail { float:left; width:auto; padding-top:10px;}
+#productList .detail h3 { font-weight:normal;}
+#productList .notice { float:left;width:320px;}
+#productList .description { display:block; margin-bottom:5px; line-height:150%; font-size:11px; font-family:"MingLiU";}
+
+.picList li { display:inline; float:left; margin:0 0 5px 5px; padding:5px; text-align:center;}
+.picList li a { display:table-cell; width:100px; height:100px; vertical-align:middle; text-align:center;}
+
+.productType th,
+.productType p { clear:both; margin-bottom:15px;}
+.productType table { width:100%;}
+.productType caption { margin-bottom:10px; color:#000;}
+
+/* free auctions */
+#auctioningList { padding-bottom:18px;}
+#auctioningList .AuctionVER { margin:18px 0 0 18px;}
+
+.titleLineHeight {line-height: 1.7 !important;}
+
+#tb_order th {text-align:center;}
+#userCommentContent th{text-align:center;}
+
+#myPriceZone {}
+#myPriceZone input{color:#369A28;border:solid 1px #FFA500;}
+#myPriceZone .myprice{width:58px;}
+#myPriceZone .mycount{width:33px;}
+.myline {border-bottom: 1px dashed sandyBrown;padding: 5px 5px 10px;}
+
+#myInfoZone { margin: 10px auto;width:200px;}
+#myInfoZone .avatar_left {width:70px;height:62px;float:left;}
+#myInfoZone .avatar_right {width:130px;height:62px;float:left;text-align:left;line-height:19px;}
+
+#titleNav a {color:#798B9B;}
+#titleNav span {font-size:12p;font-weight:normal;}
