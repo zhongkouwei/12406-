@@ -16,7 +16,7 @@ class TicketQuery
 
     function __construct()
     {
-        $this->$_app_key = C('app_key');
+        $this->_app_key = C('app_key');
     }
 
     //站到站查询
@@ -25,7 +25,7 @@ class TicketQuery
         $params = array(
             "start" => "",//出发站
             "end" => "",//终点站
-            "key" => $this->$_app_key,//应用APPKEY(应用详细页查询)
+            "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
             "dtype" => "",//返回数据的格式,xml或json，默认json
         );
         $paramstring = http_build_query($params);
@@ -50,7 +50,7 @@ class TicketQuery
             "from_station_no" => "",//出发站序号，对应12306订票①：查询车次中返回的from_station_no
             "to_station_no" => "",//出发站序号，对应12306订票①：查询车次中返回的to_station_no
             "date" => "",//默认当天，格式：2014-12-25
-            "key" => $this->$_app_key,//应用APPKEY(应用详细页查询)
+            "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
         );
         $paramstring = http_build_query($params);
         $content = $this->_juhecurl($url,$paramstring);
@@ -71,7 +71,7 @@ class TicketQuery
         $url = "http://apis.juhe.cn/train/s";
         $params = array(
             "name" => "",//车次名称，如：G4
-            "key" => $this->$_app_key,//应用APPKEY(应用详细页查询)
+            "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
             "dtype" => "",//返回数据的格式,xml或json，默认json
         );
         $paramstring = http_build_query($params);
@@ -95,7 +95,7 @@ class TicketQuery
             "start" => "",//出发站
             "end" => "",//终点站
             "traintype" => "",//列车类型，G-高速动车 K-快速 T-空调特快 D-动车组 Z-直达特快 Q-其他
-            "key" => $this->$_app_key,//应用APPKEY(应用详细页查询)
+            "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
             "dtype" => "",//返回数据的格式,xml或json，默认json
         );
         $paramstring = http_build_query($params);
@@ -116,7 +116,7 @@ class TicketQuery
     public function query4(){
         $url = "http://apis.juhe.cn/train/yp";
         $params = array(
-            "key" => $this->$_app_key,//应用APPKEY(应用详细页查询)
+            "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
             "dtype" => "",//返回数据的格式,xml或json，默认json
             "from" => "",//出发站,如：上海虹桥
             "to" => "",// 到达站,如：温州南
@@ -145,7 +145,7 @@ class TicketQuery
             "to" => "",//到达站名称：如温州南
             "date" => "",//默认当天，格式：2014-07-11
             "tt" => "",//车次类型，默认全部，如：G(高铁)、D(动车)、T(特快)、Z(直达)、K(快速)、Q(其他)
-            "key" => $this->$_app_key,//应用APPKEY(应用详细页查询)
+            "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
         );
         $paramstring = http_build_query($params);
         $content = $this->_juhecurl($url,$paramstring);
@@ -168,7 +168,7 @@ class TicketQuery
             "province" => "",//省份,如：浙江
             "city" => "",//城市，如：温州
             "county" => "",//区/县，如：鹿城区
-            "key" => $this->$_app_key,//应用APPKEY(应用详细页查询)
+            "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
             "dtype" => "",//返回数据的格式,xml或json，默认json
         );
         $paramstring = http_build_query($params);
@@ -189,7 +189,7 @@ class TicketQuery
     public function train_id(){
         $url = "http://apis.juhe.cn/train/station.list.php";
         $params = array(
-            "key" => $this->$_app_key,//应用APPKEY(应用详细页查询)
+            "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
             "dtype" => "",//返回数据的格式,xml或json，默认json
         );
         $paramstring = http_build_query($params);
