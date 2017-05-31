@@ -23,7 +23,7 @@ class UserModel extends Model
 
     public function getUserList()
     {
-        $result = self::$m_user->field('userId, userName')->select();
+        $result = self::$_m_user->field('userId, userName')->select();
 
         return $result;
     }
@@ -41,5 +41,12 @@ class UserModel extends Model
     public function addUser($data)
     {
         self::$_m_user->add($data);
+    }
+
+    public function getOneInfo($id)
+    {
+        $result = self::$_m_user->where('userId='.$id)->select();
+
+        return $result;
     }
 }

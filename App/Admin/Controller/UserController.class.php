@@ -11,7 +11,7 @@ use Admin\Model\UserModel as UserModel;
 
 class UserController extends CommonController
 {
-    public function __construct()
+    public function _initialize()
     {
         $this->client = new UserModel();
     }
@@ -21,7 +21,6 @@ class UserController extends CommonController
     {
         $data = $this->client->getUserList();
         $this->data = $data;
-
         $this->display();
     }
 
@@ -29,24 +28,25 @@ class UserController extends CommonController
     public function editUser()
     {
         if(!$_POST){
-            $this->error();
+            $this->data = $this->client->getOneInfo($_SESSION['admin']['id']);
+            $this->display();
         }
 
-        $this->client->upUser($_POST['id'], $_POST);
+        $this->client->upUser($_POST['id'], $this->input->getVar($_POST));
         $this->success('修改成功');
     }
 
     // 添加用户
     public function addUser()
     {
-        $this->client->addUser($_POST);
+        $this->client->addUser($this->input->getVar($_POST));
         $this->success('修改成功');
     }
 
     // 删除用户
-    public function deleteUser()
+    public function delUser()
     {
-        $this->client->delUser();
+        $this->client->delUser($_GET['id']);
         $this->success('删除成功');
     }
 }

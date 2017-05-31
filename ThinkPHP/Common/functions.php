@@ -1548,3 +1548,32 @@ function think_filter(&$value){
 function in_array_case($value,$array){
     return in_array(strtolower($value),array_map('strtolower',$array));
 }
+
+/**
+ * 取得对象实例 支持调用类的静态方法
+ * @param string $name 类名
+ * @param string $method 方法名，如果为空则返回实例化对象
+ * @param array $args 调用参数
+ * @return object
+ */
+function get_instance_of($name, $method='', $args=array()) {
+    static $_instance = array();
+    $identify = empty($args) ? $name . $method : $name . $method . to_guid_string($args);
+    if (!isset($_instance[$identify])) {
+        if (class_exists($name)) {
+            $o = new $name();
+            if (method_exists($o, $method)) {
+                if (!empty($args)) {
+                    $_instance[$identify] = call_user_func_array(array(&$o, $method), $args);
+                } else {
+                    $_instance[$identify] = $o->$method();
+                }
+            }
+            else
+                $_instance[$identify] = $o;
+        }
+        else
+            halt(L('_CLASS_NOT_EXIST_') . ':' . $name);
+    }
+    return $_instance[$identify];
+}

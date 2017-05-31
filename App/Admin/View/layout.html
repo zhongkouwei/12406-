@@ -33,28 +33,28 @@
             <!-- Logo (221px wide) -->
             <a href="#"><img id="logo" src="__PUBLIC__/Admin/images/logo.png" alt="Simpla Admin logo" /></a>
             <!-- Sidebar Profile links -->
-            <div id="profile-links"> 欢迎, <b> <{$Think.session.admin.username}> </b>登录！<br />
+            <div id="profile-links"> 欢迎, <b> <?=$_SESSION['admin']['userName']?> </b>登录！<br />
                 <br />
-                <a href="#" title="个人信息">个人信息</a>　|　<a href="__APP__/Login/loginOut" title="退出" target="_top">退出</a> </div>
+                <a href="#" title="个人信息">个人信息</a>　|　<a href="__APP__/Admin/Login/logout" title="退出" target="_top">退出</a> </div>
             <ul id="main-nav">
                 <!-- Accordion Menu -->
                 <li> <a href="#" class="nav-top-item no-submenu">用户管理</a>
                     <ul>
-                        <li><a href="__APP__/User/userlist" target="right">浏览用户</a></li>
-                        <li><a href="__APP__/User/useradd" target="right">增加用户</a></li>
+                        <li><a href="__APP__/Admin/User/usersList" >浏览用户</a></li>
+                        <li><a href="__APP__/Admin/User/addUser" target="right">增加用户</a></li>
                     </ul>
                 </li>
                 <li> <a href="#" class="nav-top-item"> 订单管理 </a>
                     <ul>
-                        <li><a href="__APP__/Order/mkorder" target="right">生成订单</a></li>
-                        <li><a href="__APP__/Order/oldOrder" target="right">历史订单</a></li>
-                        <li><a href="__APP__/Order/nowOrder" target="right">处理中订单</a></li>
+                        <li><a href="__APP__/Admin/Order/mkorder" target="right">生成订单</a></li>
+                        <li><a href="__APP__/Admin/Order/oldOrder" target="right">历史订单</a></li>
+                        <li><a href="__APP__/Admin/Order/nowOrder" target="right">处理中订单</a></li>
                     </ul>
                 </li>
                 <li> <a href="#" class="nav-top-item"> 消息管理 </a>
                     <ul>
-                        <li><a href="__APP__/Message/newmessageList" target="right">未读消息列表</a></li>
-                        <li><a href="__APP__/Message/messageList" target="right">所有用户列表</a></li>
+                        <li><a href="__APP__/Admin/Message/newmessageList" target="right">未读消息列表</a></li>
+                        <li><a href="__APP__/Admin/Message/messageList" target="right">所有用户列表</a></li>
                     </ul>
                 </li>
 
@@ -64,7 +64,9 @@
     </div>
 
 </div>
-{__CONTENT__}
+<div id="main-content">
+    {__CONTENT__}
+    </div>
 </body>
 <!-- Download From www.exet.tk-->
 </html>

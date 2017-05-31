@@ -22,30 +22,32 @@ class LoginController extends Controller
     public function verify()
     {
         import('ORG.Util.Image');
-        \Image::buildImageVerify(4, 5, 'png', 55, 28);
+        \Org\Util\Image::buildImageVerify(4, 5, 'png', 55, 28);
     }
 
     public function checkLogin()
     {
+        import('ORG.Util.Input');
         $input = \Input::getInstance();
         $username = $input->getVar($_POST['username']);
         $password = md5($input->getVar($_POST['password']));
-        $verify = md5($input->getVar($_POST['password']));
+        $verify = md5(strtoupper($input->getVar($_POST['verify'])));
 
         if($verify != $_SESSION['verify']) {
             $this->error('验证码错误', U('Login/login'));
         }
         $user = M('user');
-        $re =  $user->field('userId, userPassword')->where('userName='.$username)->find();
+        $condition['userName'] = $username;
+        $re =  $user->field('userId, userPassword')->where($condition)->find();
         if (empty($re)){
             $this->error('没有此用户', U('Login/login'));
         }
-        if($password != $re['userPassword']){
+        if($password != $re['userpassword']){
             $this->error('密码错误', U('Login/login'));
         }
 
-        $_SESSION['id'] = $re['userId'];
-        $_SESSION['userName'] = $re['userName'];
+        $_SESSION['admin']['id'] = $re['userid'];
+        $_SESSION['admin']['userName'] = $username;
         $this->redirect('Index/index');
 
     }

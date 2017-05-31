@@ -18,5 +18,8 @@ class CommonController extends Controller
     {
         import('ORG.Util.Input');
         $this->input = \Input::getInstance();
+        if(!isset($_SESSION['admin']['id']) || $_SESSION['admin']['id']==null){
+            $this->error('您需要登陆', U('Login/login'));
+        }
     }
 }
