@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="__PUBLIC__/Home/bs/css/bootstrap.min.css">
+    <script src="__PUBLIC__/Home/bs/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/Home/bs/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <button class="btn btn-danger">用户展示页面</button>
+                <a href="{:U('add_user')}" class="btn btn-success">用户添加</a>
+            </div>
+            <table class="table table-bordered table-hovered">
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PASS</th>
+                <th>TIME</th>
+                <th>DEL</th>
+                <th>EDIT</th>
+                <volist name="user" id="info">
+                    <tr>
+                        <td>{$info[id]}</td>
+                        <td>{$info[username]}</td>
+                        <td>{$info[userpassword]}</td>
+                        <td>{$info[time]|date="Y-m-d H:i",###}</td>
+                        <td><a href="{:U('del',array('id'=> $info[id]))}">删除</a></td>
+                        <td><a href="{:U('edit',array('id'=> $info[id]))}">修改</a></td>
+                        <td></td>
+                    </tr>
+                </volist>
+            </table>
+            <div class="panel-footer">
+                页脚
+            </div>
+        </div>
+    </div>
+</body>
+</html>

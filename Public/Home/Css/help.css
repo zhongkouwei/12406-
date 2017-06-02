@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*
+ * Copyright (c) 2010 GuangLin
+ * @Author: Cling
+ * @Date: 2011.02.11
+ */
+
+#companyWrap { padding-top:10px;}
+
+.sidebarWrap {margin-bottom:10px;}
+.sidebarWrap ul { margin:5px 0 15px 15px;}
+.sidebarWrap ul li { color:#e1e1e1;}
+
+.helpRightBg {background:url("../images/common/helpright_bg.png")/*tpa=http://game.haopai365.com/static/images/common/helpright_bg.png*/ no-repeat;width:137px;height:103px;position:absolute;top:205px;right:38px;;}
+#helpContent { padding:0;width:740px;}
+#helpContent .title{font-size:12px;font-weight:bolder;color:#484949;background:url("../images/common/ico_q.png")/*tpa=http://game.haopai365.com/static/images/common/ico_q.png*/ no-repeat;padding-left:22px;}
+#helpContent .answerTitle{font-size:12px;font-weight:bolder;color:#808A96;background:url("../images/common/ico_a.png")/*tpa=http://game.haopai365.com/static/images/common/ico_a.png*/ no-repeat;padding-left:22px;line-height:17px;}
+#helpContent .contentBody{padding:10px 0px 10px 3px;background:#FFFFFF;margin:6px;line-height:180%;min-height:350px;overflow:hidden;}
+
+.subMenu { clear:both; line-height:180%;}
+.subTitle {cursor:pointer;background:url("../images/common/helpmenu_bg.png")/*tpa=http://game.haopai365.com/static/images/common/helpmenu_bg.png*/ no-repeat scroll -1px -1px;color:#808A96;width:180px;height:34px;line-height:32px;padding-left:32px;font-weight:bold;}
+.active {background-position:-1px -37px;}
+.subMenu li {list-style-type:disc;list-style-position:inside;}

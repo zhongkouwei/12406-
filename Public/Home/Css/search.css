@@ -1,0 +1,101 @@
+@charset "utf-8";
+/*
+ * Copyright (c) 2010 GuangLin
+ * @Author: Cling
+ * @Date: 2011.02.11
+ */
+
+.gamesNav .wordIndex li, .gamesNav .hot {
+    background: url("../images/common/gamebg.png")/*tpa=http://game.haopai365.com/static/images/common/gamebg.png*/ no-repeat scroll 0 0 transparent;
+}
+.gamesNav { 
+	height:auto;min-height: 223px;
+    position: relative;border: 1px solid #F3F3F3; margin-bottom: 10px;
+    overflow: hidden;color: #404040;
+	background:#fff;
+	margin-right: 10px;
+	width:947px;
+}
+
+.navHeader {    
+	background-color: #F3F3F3;
+    border-bottom: 1px solid #F3F3F3;
+    color: #194B81;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 10px;
+    vertical-align: top;
+}
+
+.gamesNav .other-links {  
+	position: absolute;
+    right: 10px;
+    top: 7px;}
+.gamesNav .other-links a {
+    color: #194B81;
+    margin-left: 6px;
+}
+
+.gamesNav .wordIndex {
+    height: 17px;
+    overflow: hidden;
+    position: absolute;
+   	left:10px;
+    top: 5px;
+}
+.gamesNav .wordIndex li {
+    background-position: 3px -180px;
+    border-left: 1px solid #BDD2E9;
+    color: #194B81;
+    line-height: 17px;
+    text-align: center;
+    width: 22px;
+	float:left;
+	cursor:pointer;
+}
+.gamesNav .wordIndex .active {
+    background-position: 3px -160px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.gamesNav .wordIndex .hot {
+    background-position: -166px -60px;
+    border: medium none;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: -1px;
+    position: relative;
+    width: 18px;
+    z-index: 1;
+}
+
+.gamesNav .navBody ul {
+    overflow: hidden;
+    padding: 10px 0 0 15px;
+    width:100%;
+}
+.gamesNav .navBody li {
+    float: left;
+    width: 96px;
+    cursor:pointer;
+    color: #575757;
+    line-height: 2.1;
+    margin-right: 8px;
+	height:20px;
+	overflow:hidden;
+	display:inline;
+}
+
+.h {
+    color: #FF5500 !important;
+}
+
+.selectbg {    
+ 	background: url("../images/common/selectbg.gif")/*tpa=http://game.haopai365.com/static/images/common/selectbg.gif*/ no-repeat scroll 0 0 transparent;
+    display: inline;
+    height: 21px;
+    line-height: 25px;
+    padding-left: 5px;
+    padding-right: 20px;
+    width: 80px;
+}

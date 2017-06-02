@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>
+#<IfModule mod_rewrite.c>
+#  Options +FollowSymlinks
+#
+##  Rewrite模式配置
+#  RewriteEngine On
+#  RewriteCond %{REQUEST_FILENAME} !-d
+#  RewriteCond %{REQUEST_FILENAME} !-f
+#  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+
+#  4URl重写
+#  RewriteRule ([p]{1,})/([a-zA-Z,0-9]{1,})\.html$ content/index/id/$2
+#  RewriteRule ([c]{1,})/([a-zA-Z,0-9]{1,})\.html$ column/index/id/$2
+#  RewriteRule ([c]{1,})/([a-zA-Z,0-9]{1,})-([a-zA-Z,0-9]{1,})\.html$ column/index/id/$2/p/$3
+#  RewriteRule ([u]{1,}) - ([a-zA-Z,0-9]{1,})$ user.php/UserOperation/WeiBo_Login/ac/$2
+#  RewriteRule ([u]{1,}) - ([a-zA-Z,0-9]{1,})/$ user.php/UserOperation/WeiBo_Login/ac/$2
+#</IfModule>

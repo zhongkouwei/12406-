@@ -1,0 +1,116 @@
+@charset "utf-8";
+/*
+ * Copyright (c) 2010 GuangLin
+ * @Author: Cling
+ * @Date: 2011.02.11
+ */;
+
+* {word-wrap:break-word;}
+#memberWrap {}
+#menubar { position:relative; float:left;overflow:hidden;width:200px;}
+.subMenu { clear:both; margin-bottom:18px; line-height:170%;}
+.subMenu dt {background:url("../images/usercenter/menubg.png")/*tpa=http://game.haopai365.com/static/images/usercenter/menubg.png*/ repeat scroll -1px -1px;color:#990000;width:203px;height:34px;line-height:32px;padding-left:32px;font-weight:bold;}
+.subMenu dd {border-bottom:1px solid #ECF1F3;padding:5px 10px;}
+.subMenu dd a {}
+
+.borderbox {border:1px solid #CCCCCC;margin:0;padding:5px;margin-bottom:15px;color:#990000;font-weight:bolder;height:16px;}
+.borderbox img {margin:0 5px 0 0;vertical-align:middle;}
+
+#contentWrap { float:right; width:746px;}
+#contentWrap h4 { margin:35px 0 5px 0; font-size:12px; color:#000;}
+#contentWrap h4 a { font-weight:normal;}
+/*user space*/
+#user_avatar {text-align:center;}
+
+/* noticeBox */
+#noticeBox { width:746px; margin-bottom:10px;}
+#noticeBox .bg { width:726px; padding:5px 10px; margin-bottom:10px; background-color:#FFFFE0; border-color:#F9DFB2; height:18px; overflow:hidden;}
+#noticeBox .num {color:#FF0000;}
+#noticeBox dd {display:inline;float:left;margin:0 30px 0 10px;}
+#noticeBox dt {display:inline;float:left;}
+
+/* order list*/
+.mbtable {width:758px; position:relative; border-collapse:collapse; table-layout:fixed; border-spacing: 0;}
+.mbtable td {text-align:center;background:#ffffff;}
+.mbtable  th {border-bottom:1px solid #AEC7E5;color:#000000;background:#ffffff;height:29px;text-align:center; font-style:normal; font-weight:normal;margin:0;padding:0;}
+.mbtable img { border-style:none; border-width:0;}
+/*.s50 img {height:65px;width:90px;}*/
+.order-hd {color:#404040;background:#F3F3F3;height:25px;line-height:25px;}
+.chart th{text-align:center;}
+.name a{color:#3366CC;}
+.order_t_left{font-weight:bolder;width:210px;height:auto;overflow:hidden;float:left;}
+.order_t_right{font-weight:bolder;width:320px;float:left;over-flow:hidden;}
+
+/*member form*/
+.mb_tb_form{width:100%;height:auto;overflow:hidden;background:#ffffff;padding:10px 0px;}
+.mb_tb {background:none repeat scroll 0 0 #FFFFFF;border:1px solid #F3F3F3;width:100%;color:#798B9B;}
+.mb_tb .td_title {width: 60px; padding-left: 50px;}
+.mb_tb .td_title80 {width: 80px; padding-left: 50px;}
+.mb_tb .td_p10px {padding-left: 10px;}
+.mb_tb th, .mb_tb td {border:1px solid #F3F3F3;padding:3px;vertical-align:middle;}
+.mb_tb th {background:none repeat scroll 0 0 #F3F3F3;color:#035A87;height:28px;}
+.mb_tb caption{color:#FC6210;font-weight:700;height:22px;}
+
+.tb_caption {color:#FC6210;font-weight:700;height:22px;}
+
+.mb_tb .mb_saveBtn {padding-left: 105px;}
+.mb_tb .mb_saveBtn80 {padding-left: 135px;}
+.tb_field_note {margin-left:10px;color:#808080;vertical-align:top;}
+.mb_note {color:#FF633F;line-height:30px;}
+.mb_tr_hover {background:#A2CBFF;color:blue;}
+.mb_tr_hover a {color:blue;}
+.mb_tr_hover a:hover {color:#FF6600;}
+
+.mb_padding10 {padding-left:10px;}
+.mb_list {width:100%px;height:auto;overflow:hidden;margin:10px;}
+.spark-flag{color:#FF0000;vertical-align:top;}
+
+.ptn {padding-top: 5px !important;}
+.xl2 li {float: left;margin: 2px 0;overflow: hidden;padding: 0;width: 48.6%;}
+#borderbox  a {color:#990000;}
+#borderbox  li a {font-weight:normal;}
+hr {clear: both;display: block;}
+hr.da {background: none repeat scroll 0 0 transparent;border-color: #CDCDCD -moz-use-text-color -moz-use-text-color;border-right: medium none;border-style: dashed none none;border-width: 1px medium medium;color: transparent;height: 0;}
+
+/*order send dialog*/
+#sendDialog ul{clear:both;height:auto;overflow:hidden;}
+#pay2 ul{height:125px;}
+#sendDialog li{width:auto;padding-right:10px;height:22px;line-height:22px;margin:auto;padding-left:10px;}
+#sendDialog .liselected{background-color:#FFFFE0;border:solid 1px #F9DFB2;}
+
+.partition {height:30px;width:724px;position:relative;font-size:13px;font-weight:bolder;line-height:30px;border-bottom:solid 3px #EAEAEA;margin-bottom:10px;}
+.partition span{font-size:12px;font-weight:normal;padding-left:20px;display:inline;}
+.showall,.showmini {font-size:12px;font-weight:400;position:absolute;;right:0;top:0;padding-right:15px;background:url("../images/payment/updownflag.gif")/*tpa=http://game.haopai365.com/static/images/payment/updownflag.gif*/ no-repeat scroll 0 0 transparent;}
+
+.showall {background-position:right -3px;}
+.showmini {background-position:right -28px;}
+.addressmore {display:none;}
+.addressmoreshow {display:block;}
+
+.payinput_label {width:80px;display:block;float:left;}
+.payprice {font-size:28px;padding:0px 5px;font-weight:bolder;color:#F77215;}
+.paybutton {height:40px;margin-top:10px;}
+
+#otherAddress {background:none repeat scroll 0 0 #F7F7F7;line-height:28px;padding:6px;color:#035A87;display:none;margin:8px auto;width:600px;}
+.mb_tb .td_title802 {width: 80px; padding-left: 20px; text-align:right;}
+
+/*message*/
+.item {padding:0px 0px 5px 65px;border-bottom: 1px dashed #CDCDCD;padding-left: 65px;overflow:hidden;}
+.itemLeft {display: inline;margin: 8px 0 8px -65px;float:left;}
+.itemRight {}
+.itemNav {font-weight: 700;padding: 8px 0 5px;}
+.itemTime { font-weight: 400; color: #999999;}
+.itemText {word-wrap: break-word; font-weight: 700;display:block;color:#444444;}
+.avt img {-moz-border-radius: 5px 5px 5px 5px;background: none repeat scroll 0 0 #FFFFFF;border-color: #F2F2F2 #CDCDCD #CDCDCD #F2F2F2;border-style: solid;border-width: 1px;height: 48px;padding: 2px;width: 48px;}
+.itemDel { background: url("../images/common/op.png")/*tpa=http://game.haopai365.com/static/images/common/op.png*/ no-repeat scroll 0 -2px transparent;float: right;height: 20px;line-height: 100px;overflow: hidden;width: 20px;}
+.itemNav a.itemDel:hover{ background-position: 0 -22px;}
+
+/*vip icon*/
+.vipbg {background-image:url("../images/common/common_vip.png")/*tpa=http://game.haopai365.com/static/images/common/common_vip.png*/;width:29px;height:16px;}
+.vip1 { background-position:0 0px;}
+.vip2 { background-position:0 -16px;}
+.vip3 { background-position:0 -32px;}
+.vip4 { background-position:0 -48px;}
+.vip5 { background-position:0 -54px;}
+
+

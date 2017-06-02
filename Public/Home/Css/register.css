@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*
+ * Copyright (c) 2010 GuangLin
+ * @Author: Cling
+ * @Date: 2011.02.11
+ */
+
+/*login & register & get password*/
+#register {}
+#signUpNow { float:left; margin-bottom:0; width:960px;padding-bottom:10px;}
+#register .input { padding:3px 3px 2px 3px; height:19px; font-size:18px;}
+#loginContainer{padding-bottom:10px;}
+.loginContent {width:936px;margin:10px 10px 0px 10px;background:#f8f8f8;height:auto;overflow:hidden;}
+.leftinfo {width:374px;float:left;padding:10px 0px 10px 10px; }
+#pwdPage .leftinfo {width:500px;}
+.rightInfoShow {float:right;}
+#rightShow {background:url("../Images/a-d/login-ad1.jpg")/*tpa=http://game.haopai365.com/static/a-d/login-ad1.jpg*/ no-repeat;width:500px;height:282px;}
+
+.loginRight-ad1 {background:url("../Images/a-d/login-ad1.jpg")/*tpa=http://game.haopai365.com/static/a-d/login-ad1.jpg*/ no-repeat;width:500px;height:282px;}
+.regRight-ad1 {background:url("../Images/a-d/reg-ad1.jpg")/*tpa=http://game.haopai365.com/static/a-d/reg-ad1.jpg*/ no-repeat;width:526px;height:282px;}
+.regRight-ad2 {background:url("../Images/a-d/reg-ad2.jpg")/*tpa=http://game.haopai365.com/static/a-d/reg-ad2.jpg*/ no-repeat;width:519px;height:413px;}
