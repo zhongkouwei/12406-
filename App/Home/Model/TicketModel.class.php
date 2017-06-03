@@ -5,26 +5,23 @@
  * Date: 17-5-25
  * Time: 下午5:20
  */
-
 namespace Home\Model;
-
-
-class TicketQuery
+use Think\Model;
+class TicketModel extends Model
 {
     // 私有成员
     private $_app_key = '';
-
     function __construct()
     {
         $this->_app_key = C('app_key');
     }
-
     //站到站查询
-    public function query1(){
+    public function query1($start,$end,$date){
         $url = "http://apis.juhe.cn/train/s2swithprice";
         $params = array(
-            "start" => "",//出发站
-            "end" => "",//终点站
+            "start" => $start,//出发站
+            "end" => $end,//终点站
+            'date'=> $date,  // 日期
             "key" => $this->_app_key,//应用APPKEY(应用详细页查询)
             "dtype" => "",//返回数据的格式,xml或json，默认json
         );
@@ -33,15 +30,14 @@ class TicketQuery
         $result = json_decode($content,true);
         if($result){
             if($result['error_code']=='0'){
-                print_r($result);
+                return $result;
             }else{
-                echo $result['error_code'].":".$result['reason'];
+                return $result['error_code'].":".$result['reason'];
             }
         }else{
             echo "请求失败";
         }
     }
-
     //12406订票，车次票价查询
     public function order(){
         $url = "http://apis.juhe.cn/train/ticket.price.php";
@@ -65,7 +61,6 @@ class TicketQuery
             echo "请求失败";
         }
     }
-
     //车次查询
     public function query2(){
         $url = "http://apis.juhe.cn/train/s";
@@ -87,7 +82,6 @@ class TicketQuery
             echo "请求失败";
         }
     }
-
     //站到站查询
     public function query3(){
         $url = "http://apis.juhe.cn/train/s2s";
@@ -111,7 +105,6 @@ class TicketQuery
             echo "请求失败";
         }
     }
-
     //12406实时余票查询
     public function query4(){
         $url = "http://apis.juhe.cn/train/yp";
@@ -136,7 +129,6 @@ class TicketQuery
             echo "请求失败";
         }
     }
-
     //12406订票：车次查询
     public function query5(){
         $url = "http://apis.juhe.cn/train/ticket.cc.php";
@@ -160,7 +152,6 @@ class TicketQuery
             echo "请求失败";
         }
     }
-
     //火车票代售点查询
     public function query6(){
         $url = "http://apis.juhe.cn/train/dsd";
@@ -184,7 +175,6 @@ class TicketQuery
             echo "请求失败";
         }
     }
-
     //列车站点列表
     public function train_id(){
         $url = "http://apis.juhe.cn/train/station.list.php";
@@ -205,17 +195,14 @@ class TicketQuery
             echo "请求失败";
         }
     }
-
-
     // * 请求接口返回内容
     // * @param  string $url [请求的URL地址]
     // * @param  string $params [请求的参数]
-    // * @param  int $ipost [是否采用POST形式]
+    // * @param  int $ispost [是否采用POST形式]
     // * @return  string
     private function _juhecurl($url,$params=false,$ispost=0){
         $httpInfo = array();
         $ch = curl_init();
-
         curl_setopt( $ch, CURLOPT_HTTP_VERSION , CURL_HTTP_VERSION_1_1 );
         curl_setopt( $ch, CURLOPT_USERAGENT , 'JuheData' );
         curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT , 60 );
@@ -246,5 +233,4 @@ class TicketQuery
         curl_close( $ch );
         return $response;
     }
-
 }
