@@ -30,9 +30,10 @@ class UserController extends CommonController
         if(!$_POST){
             $this->data = $this->client->getOneInfo($_SESSION['admin']['id']);
             $this->display();
+            exit();
         }
 
-        $this->client->upUser($_POST['id'], $this->input->getVar($_POST));
+        $this->client->upUser($_POST['id'], parent::$input->getVar($_POST));
         $this->success('修改成功');
     }
 
