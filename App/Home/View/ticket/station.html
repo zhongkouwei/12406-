@@ -34,26 +34,26 @@
 			</tr>	
 			<volist name="station" id="info">
                	<tr>
-                    <td>{$info[train_no]}</td>
+                    <td>{$info['train_no']}</td>
                     <td>
-                    <strong>{$info[start_station]}</strong>
-                    <strong>{$info[end_station]}</strong>
+                    <strong>{$info['start_station']}</strong>
+                    <strong>{$info['end_station']}</strong>
                     </td>
                     <td>                   
-                    <strong>{$info[start_time]}</strong>
-                    <strong>{$info[end_time]}</strong>
+                    <strong>{$info['start_time']}</strong>
+                    <strong>{$info['end_time']}</strong>
                     </td>
-                    <td>{$info[run_time]}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{$info['run_time']}</td>
+                    <td>{$info[0]['shangwu']}</td>
+                    <td>{$info[0]['tedeng']}</td>
+                    <td>{$info[0]['yideng']}</td>
+                    <td>{$info[0]['erdeng']}</td>
+                    <td>{$info[0]['gaojiruanwo']}</td>
+                    <td>{$info[0]['ruanwo']}</td>
+                    <td>{$info[0]['yingwo']}</td>
+                    <td>{$info[0]['ruanzuo']}</td>
+                    <td>{$info[0]['yingzuo']}</td>
+                    <td>{$info[0]['wuzuo']}</td>
                 </tr>
             </volist>
         </table>
