@@ -1,0 +1,33 @@
+	<layout name="indexlayout" />
+	
+		<h1 class="page-header">火车站代售点查询</h1>
+        <form action="{:U('Ticket/outlets')}" method="post">
+            省：<input type="text" class="form-control" name="province" placeholder="省:如 浙江" value="{:I('post.province')}">
+            市：<input type="text" class="form-control" name="city" placeholder="市:如温州" value="{:I('post.city')}">
+            县：<input type="text" class="form-control" name="country" placeholder="区/县:如鹿城区" value="{:I('post.country')}">
+            <input type="reset" style="float:right;margin:5px" class="btn btn-success" value="重置">
+            <input type="submit" style="float:right;margin:5px" class="btn btn-success" value="查询">
+        </form>
+		共有{$outlets|count}个火车站点
+		<table class='table table-striped table-bordered table-hover'>
+			<tr>
+				<th>代售点名称</th>
+				<th>地址</th>
+				<th>联系方式</th>
+			 	<th>营业时间</th>
+			</tr>	
+			<volist name="outlets" id="info">
+               	<tr >
+                    <td style="text-align: center">{$info['agency_name']}</td>
+                    <td style="text-align: center">{$info['address']}</td>
+                    <td style="text-align: center">{$info['phone_no']}</td>
+                    <td style="text-align: center">
+                    {$info['start_time_am']}--{$info['stop_time_am']}
+                    <br />
+                    {$info['start_time_pm']}--{$info['stop_time_pm']}
+                    </td>
+                </tr>
+            </volist>
+        </table>
+
+		

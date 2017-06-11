@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>站到站查询</title>
+	<link rel="stylesheet" href="__PUBLIC__/Home/bs/css/bootstrap.min.css">
+    <script src="__PUBLIC__/Home/bs/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/Home/bs/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="page-header">实时余票查询</h1>
+        <form action="{:U('Ticket/test')}" method="post">
+            出发站：<input type="text" class="form-control" name="from" placeholder="如:上海虹桥" value="{:I('post.from')}">
+            到达站：<input type="text" class="form-control" name="to" placeholder="如:温州南" value="{:I('post.to')}">
+            出发日期：<input type="text" class="form-control" name="date" placeholder="默认今日" value="{:I('post.date')}">
+            车次类型：<input type="text" class="form-control" name="tt" placeholder="默认全部，如：G(高铁)、D(动车)、T(特快)、Z(直达)、K(快速)、Q(其他)" value="{:I('post.tt')}">
+            <input type="reset" style="float:right;margin:5px" class="btn btn-success" value="重置">
+            <input type="submit" style="float:right;margin:5px" class="btn btn-success" value="查询">
+        </form>
+			
+	</div>
+	
+</body>
+</html>
