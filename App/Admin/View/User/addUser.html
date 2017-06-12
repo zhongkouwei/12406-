@@ -1,0 +1,64 @@
+
+<div class="content-box-header">
+    <h3>添加用户</h3>
+    <div class="clear"></div>
+</div>
+
+<div class="content-box-content">
+    <div class="tab-content default-tab" id="tab1">
+        <!-- This is the target div. id must match the href of this div's tab -->
+        <form action="__APP__/Admin/User/addUser" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+                <p>
+                    <input type="hidden" name="id" value="{$data.0.userid}">
+                    <label>用户名</label>
+                    <input class="text-input small-input" type="text" id="name" name="userName" value="{$data.0.username}"/>
+                </p>
+
+                <p>
+                    <label>身份证号</label>
+                    <input class="text-input small-input" type="text" id="small-input" name="userCard" value="{$data.0.usercard}"/>
+                </p>
+
+                <p>
+                    <label>性别</label>
+                    <if condition="$data['0'].userSex eq 1">
+                        <input type="radio" name="userSex" value="1" checked="checked"/>
+                        男
+                        <input type="radio" name="userSex" value="0"/>
+                        女
+                        <else />
+                        <input type="radio" name="userSex" value="1"/>
+                        男
+                        <input type="radio" name="userSex" value="0"  checked="checked"/>
+                        女
+                    </if>
+                </p>
+
+                </p>
+
+                <p>
+                    <label>照片</label>
+                    <input class="text-input small-input" type="file"  name="userphoto" />
+                </p>
+
+                <p>
+                    <label>密码</label>
+                    <input class="text-input small-input" type="text" id="small-input" name="userPassword" value=""/>
+                </p>
+
+                <p>
+                    <input class="button" type="submit" value="提交" />
+                </p>
+            </fieldset>
+            <div class="clear"></div>
+            <!-- End .clear -->
+        </form>
+
+    </div>
+
+    <!-- End #tab2 -->
+</div>
+<!-- End .content-box-content -->
+</div>

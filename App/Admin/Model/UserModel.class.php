@@ -23,13 +23,16 @@ class UserModel extends Model
 
     public function getUserList()
     {
-        $result = self::$_m_user->field('userId, userName')->select();
+        $result = self::$_m_user->select();
 
         return $result;
     }
 
     public function upUser($id, $data)
     {
+        if (empty($data['userPassword']))
+            unset($data['userPassword']);
+
         self::$_m_user->where('userId='.$id)->save($data);
     }
 

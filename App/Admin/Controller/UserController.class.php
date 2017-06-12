@@ -8,6 +8,8 @@
 
 namespace Admin\Controller;
 use Admin\Model\UserModel as UserModel;
+//use Org\Net\UploadFile as UploadFile;
+//use Org\Util\Image as Image;
 
 class UserController extends CommonController
 {
@@ -28,19 +30,24 @@ class UserController extends CommonController
     public function editUser()
     {
         if(!$_POST){
-            $this->data = $this->client->getOneInfo($_SESSION['admin']['id']);
+            $this->data = $this->client->getOneInfo($_GET['id']);
             $this->display();
             exit();
         }
 
-        $this->client->upUser($_POST['id'], parent::$input->getVar($_POST));
+        $this->client->upUser($_POST['id'], $_POST);
         $this->success('修改成功');
     }
 
     // 添加用户
     public function addUser()
     {
-        $this->client->addUser($this->input->getVar($_POST));
+        if (!$_POST) {
+            $this->display();
+            exit();
+        }
+
+        $this->client->addUser($_POST);
         $this->success('修改成功');
     }
 
