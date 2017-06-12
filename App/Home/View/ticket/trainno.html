@@ -1,0 +1,56 @@
+<layout name="indexlayout"/>
+		<h1 class="page-header">实时余票查询</h1>
+        <form action="{:U('Ticket/trainno')}" method="post">
+            车次名称：<input type="text" class="form-control" name="tt" placeholder="如:G4，K1573" value=" {:I('post.tt')}">
+            <input type="reset" style="float:right;margin:5px" class="btn btn-success" value="重置">
+            <input type="submit" style="float:right;margin:5px" class="btn btn-success" value="查询">
+        </form>
+        
+        <table class="table table-condensed">
+        	<tr colspan="2">
+        		<th>
+        			列车信息：
+        		</th>
+        	</tr>
+        	<tr>
+        		<th>列车名称</th>
+        		<th>{$trainno['train_info']['name']}</th>
+        	</tr>
+        	<tr>
+        		<th>列车起始站</th>
+        		<th>{$trainno['train_info']['start']}--{$trainno['train_info']['end']}</th>
+        	</tr>
+        	<tr>
+        		<th>列车起始时间</th>
+        		<th>{$trainno['train_info']['starttime']}--{$trainno['train_info']['endtime']}</th>
+        	</tr>
+        	<tr>
+        		<th>里程</th>
+        		<th>{$trainno['train_info']['mileage']}</th>
+        	</tr>
+        </table>
+		
+		共有{$trainno['station_list']|count}个站点
+        <table class='table table-striped table-bordered table-hover'>
+        	<tr>
+        		<th colspan="5">火车路过站点信息</th>
+			</tr>
+			<tr>
+				<th>站点id</th>
+				<th>站点名称</th>
+				<th>到达时间</th>
+			 	<th>离开时间</th>
+			 	<th>停留时间</th>
+			</tr>	
+			
+			<volist name="trainno['station_list']" id="info">
+               	<tr>
+                    <td style="text-align: center">{$info['train_id']}</td>
+                    <td style="text-align: center">{$info['station_name']}</td>
+                    <td style="text-align: center">{$info['arrive_time']}</td>
+                    <td style="text-align: center">{$info['leave_time']}</td>
+                    <td style="text-align: center">{$info['stay']}</td>  
+                </tr>
+            </volist>
+        </table>
+        

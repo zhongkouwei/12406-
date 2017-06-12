@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class UserController extends Controller
+class UserController extends CommonController
 {
     //用户展示页面
     public function index(){
@@ -61,7 +61,7 @@ class UserController extends Controller
         }else{
             //获取数据
             $data=$model->find($id);
-            //        var_dump($data);
+    //        var_dump($data);
             $this->assign('data',$data);
             $this->display();
         }

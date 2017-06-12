@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>站到站查询</title>
-	<link rel="stylesheet" href="__PUBLIC__/Home/bs/css/bootstrap.min.css">
-    <script src="__PUBLIC__/Home/bs/js/jquery.min.js"></script>
-    <script src="__PUBLIC__/Home/bs/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<div class="container">
+	<layout name="indexlayout" />
+	
 		<h1 class="page-header">站到站查询</h1>
-	    起始站：<input type="text" class="form-control" name="start" placeholder="不需要填写站，如北京">
-		终点站：<input type="text" class="form-control" name="end" placeholder="不需要填写站，如天津">
-		日期：<input type="text" class="form-control" name="date" placeholder="默认格式：2017-06-03,默认为明天">
-		<input type="reset" style="float:right;margin:5px" class="btn btn-success" value="重置">
-		<input type="submit" style="float:right;margin:5px" class="btn btn-success" value="查询">
+		<form action="{:U('Ticket/station')}" method="post">
+		    起始站：<input type="text" class="form-control" name="start" placeholder="不需要填写站，如北京" value="{:I('post.start')}">
+			终点站：<input type="text" class="form-control" name="end" placeholder="不需要填写站，如天津" value="{:I('post.end')}">
+			日期：<input type="text" class="form-control" name="date" placeholder="默认格式：2017-06-03,默认为明天" value="{:I('post.date')}">
+			<input type="reset" style="float:right;margin:5px" class="btn btn-success" value="重置">
+			<input type="submit" style="float:right;margin:5px" class="btn btn-success" value="查询">
+		</form>
+		共有{$station|count}条数据
 		<table class='table table-striped table-bordered table-hover'>
 			<tr>
 				<th>车次</th>
@@ -33,31 +27,68 @@
 			 	<th>无座</th>
 			</tr>	
 			<volist name="station" id="info">
-               	<tr>
-                    <td>{$info['train_no']}</td>
-                    <td>
-                    <strong>{$info['start_station']}</strong>
-                    <strong>{$info['end_station']}</strong>
+               	<tr name="info1">
+                    <td style="text-align: center">{$info['train_no']}</td>
+                    <td style="text-align: center">
+                   	{$info['start_station_type']}&nbsp<strong>{$info['start_station']}</strong>
+                    <br />
+                    {$info['end_station_type']}&nbsp<strong>{$info['end_station']}</strong>
                     </td>
-                    <td>                   
+                    <td style="text-align: center">                   
                     <strong>{$info['start_time']}</strong>
+                    <br />
                     <strong>{$info['end_time']}</strong>
                     </td>
-                    <td>{$info['run_time']}</td>
-                    <td>{$info[0]['shangwu']}</td>
-                    <td>{$info[0]['tedeng']}</td>
-                    <td>{$info[0]['yideng']}</td>
-                    <td>{$info[0]['erdeng']}</td>
-                    <td>{$info[0]['gaojiruanwo']}</td>
-                    <td>{$info[0]['ruanwo']}</td>
-                    <td>{$info[0]['yingwo']}</td>
-                    <td>{$info[0]['ruanzuo']}</td>
-                    <td>{$info[0]['yingzuo']}</td>
-                    <td>{$info[0]['wuzuo']}</td>
+                    <td style="text-align: center">{$info['run_time']}</td>
+                    <td style="text-align: center">{$info[0]['shangwu']}</td>
+                    <td style="text-align: center">{$info[0]['tedeng']}</td>
+                    <td style="text-align: center">{$info[0]['yideng']}</td>
+                    <td style="text-align: center">{$info[0]['erdeng']}</td>
+                    <td style="text-align: center">{$info[0]['gaojiruanwo']}</td>
+                    <td style="text-align: center">{$info[0]['ruanwo']}</td>
+                    <td style="text-align: center">{$info[0]['yingwo']}</td>
+                    <td style="text-align: center">{$info[0]['ruanzuo']}</td>
+                    <td style="text-align: center">{$info[0]['yingzuo']}</td>
+                    <td style="text-align: center">{$info[0]['wuzuo']}</td>
+                </tr>
+                <tr name="info2" style="display: none">
+                	<td></td>
+                	<td></td>
+                	<td></td>
+                	<td></td>
+                    <td style="text-align: center">{$info[0]['shangwu_p']}</td>
+                    <td style="text-align: center">{$info[0]['tedeng_p']}</td>
+                    <td style="text-align: center">{$info[0]['yideng_p']}</td>
+                    <td style="text-align: center">{$info[0]['erdeng_p']}</td>
+                    <td style="text-align: center">{$info[0]['gaojiruanwo_p']}</td>
+                    <td style="text-align: center">{$info[0]['ruanwo_p']}</td>
+                    <td style="text-align: center">{$info[0]['yingwo_p']}</td>
+                    <td style="text-align: center">{$info[0]['ruanzuo_p']}</td>
+                    <td style="text-align: center">{$info[0]['yingzuo_p']}</td>
+                    <td style="text-align: center">{$info[0]['wuzuo_p']}</td>                	
                 </tr>
             </volist>
         </table>
-	</div>
-	
-</body>
-</html>
+<script>
+    var myInfo1 = document.getElementsByName('info1');
+    var myInfo2 = document.getElementsByName('info2');
+    for(var i=0;i<myInfo1.length;i++){
+        myInfo1[i].i = i;
+        myInfo2[i].i = i;
+        myInfo1[this.i].onclick = function(){
+            if (myInfo2[this.i].style.display == 'none') {
+                for (var j = 0; j < myInfo2.length; j++) {
+                    myInfo2[j].style.display = 'none';
+                }
+                myInfo2[this.i].style.display = 'table-row'
+            }else{
+                myInfo2[this.i].style.display = 'none'
+            }
+            
+
+        }
+    }
+
+
+</script>
+		
