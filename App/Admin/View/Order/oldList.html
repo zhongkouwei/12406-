@@ -1,20 +1,29 @@
 <div class="content-box-header">
-    <h3>订单</h3>
+    <h3>下单中</h3>
 
     <div class="clear"></div>
 </div>
 <!-- End .content-box-header -->
 <div class="content-box-content">
     <div class="tab-content default-tab" id="tab1">
+        <!-- This is the target div. id must match the href of this div's tab -->
+        <div class="notification attention png_bg">
 
+            <form name="searchForm" action="__URL__/oldOrder" method="post">
+                区间　<input type="date" name="starttime" value="">　至　<input type="date" name="endtime" value="">
+                <input type="submit" class="sendReq" value="筛选" />
+            </form>
+
+        </div>
         <table>
             <thead>
             <tr>
+
                 <td>订单号</td>
                 <td>用户</td>
                 <td>日期</td>
                 <td>列车</td>
-                <td>操作</td>
+                <td>状态</td>
             </tr>
             </thead>
             <tfoot>
@@ -38,8 +47,13 @@
                     <td>{$vo.userid}</td>
                     <td>{$vo.date}</td>
                     <td>{$vo.trainname}</td>
-                    <td><a href="__APP__/Admin/Order/sendOut/id/{$vo.orderid}" title="发货">发货</a>
-                        <a href="__APP__/Admin/Order/sendNo/id/{$vo.orderid}" title="无票">无票</a></td>
+                    <td> <if condition="$vo.status eq '完成'">
+                                完成
+                        <else />
+                                无票
+                         </if>
+
+                    </td>
                 </tr>
             </foreach>
             <!--遍历类别结束-->

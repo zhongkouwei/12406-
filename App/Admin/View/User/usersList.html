@@ -19,6 +19,7 @@
                     <thead>
                     <tr>
                         <td>用户名</td>
+                        <td>级别</td>
                         <td>操作</td>
                     </tr>
                     </thead>
@@ -40,7 +41,15 @@
                     <foreach name="data" item="vo">
                         <tr>
                             <td>{$vo.username}</td>
-
+                            <td>
+                                <?php if($vo['userlevel']==0)
+                                    echo "普通用户";
+                                else if($vo['userlevel']==1)
+                                    echo "管理员";
+                                else
+                                    echo "超级管理员";
+                                ?>
+                            </td>
                             <td>
                                 <!-- Icons -->
                                 <a href="__APP__/Admin/User/delUser/id/{$vo.userid}" title="删除此用户"><img src="__PUBLIC__/Admin/Images/icons/cross.png" alt="删除此用户" /></a>

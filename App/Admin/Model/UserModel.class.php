@@ -32,6 +32,8 @@ class UserModel extends Model
     {
         if (empty($data['userPassword']))
             unset($data['userPassword']);
+        else
+            $data['userPassword'] = md5($data['userPassword']);
 
         self::$_m_user->where('userId='.$id)->save($data);
     }
@@ -43,6 +45,8 @@ class UserModel extends Model
 
     public function addUser($data)
     {
+        $data['userPassword'] = md5($data['userPassword']);
+
         self::$_m_user->add($data);
     }
 

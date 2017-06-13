@@ -22,6 +22,11 @@
                 </p>
 
                 <p>
+                    <label>邮箱</label>
+                    <input class="text-input small-input" type="text" id="small-input" name="userEmail" value="{$data.0.useremail}"/>
+                </p>
+
+                <p>
                     <label>性别</label>
                     <if condition="$data['0'].userSex eq 1">
                         <input type="radio" name="userSex" value="1" checked="checked"/>
@@ -36,6 +41,12 @@
                     </if>
                 </p>
 
+                <p>
+                    <label>级别</label>
+                    <select name="userLevel" id="userLevel">
+                        <option value=0>普通用户</option>
+                        <option value=1>管理员</option>
+                    </select>
                 </p>
 
                 <p>

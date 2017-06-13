@@ -20,13 +20,25 @@ class OrderModel extends Model
 
     public function getOrderList()
     {
-        $result = $this->_m_order->select();
+        $result = $this->_m_order->where("status = '预定' ")->select();
 
         return $result;
     }
 
-    public function sendOut()
+    public function getOldList()
     {
+        $result = $this->_m_order->where("status != '预定' ")->select();
 
+        return $result;
+    }
+
+    public function sendOut($id)
+    {
+        $this->_m_order->where('orderId ='.$id)->setField('status','完成');
+    }
+
+    public function sendNo($id)
+    {
+        $this->_m_order->where('orderId ='.$id)->setField('status', '无票');
     }
 }

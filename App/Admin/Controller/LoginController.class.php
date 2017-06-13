@@ -38,9 +38,12 @@ class LoginController extends Controller
         }
         $user = M('user');
         $condition['userName'] = $username;
-        $re =  $user->field('userId, userPassword')->where($condition)->find();
+        $re =  $user->field('userId, userPassword, userLevel')->where($condition)->find();
         if (empty($re)){
             $this->error('没有此用户', U('Login/login'));
+        }
+        if ($re['userlevel'] == 0){
+            $this->error('您没有管理员权限', U('Login/login'));
         }
         if($password != $re['userpassword']){
             $this->error('密码错误', U('Login/login'));
