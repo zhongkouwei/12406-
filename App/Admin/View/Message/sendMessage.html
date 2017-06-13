@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+
+            background:#4D4948;
+        }
+        .bubbleDiv{
+            width: 1000px;
+            margin: 0 auto;
+            height: 600px;
+            background: white;
+        }
+        .bubbleItem{
+            width: 100%;
+        }
+        .bubble{
+            max-width: 655px;
+            position: relative;
+            line-height: 30px;
+            padding-left: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 7px;
+            margin-top: 15px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+        .leftBubble{
+            position: relative;
+            margin-left: 25px;
+            border: 1px solid #00b6b6;
+            background-color: #f8fdfc;
+        }
+        .leftBubble .bottomLevel{
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            border-top: 10px solid #00b6b6;
+            border-left: 10px solid transparent;
+        }
+        .leftBubble .topLevel{
+            position: absolute;
+            top: 11px;
+            left: -8px;
+            border-top: 10px solid #f8fdfc;
+            border-left: 10px solid transparent;
+            z-index: 100;
+        }
+        .rightBubble{
+            position: relative;
+            margin-right: 25px;
+            float: right;
+            border: 1px solid #aaa;
+        }
+        .rightBubble .bottomLevel{
+            position: absolute;
+            bottom: 11px;
+            right: -10px;
+            border-bottom: 10px solid #aaa;
+            border-right: 10px solid transparent;
+        }
+        .rightBubble .topLevel{
+            position: absolute;
+            bottom: 12px;
+            right: -8px;
+            border-bottom: 10px solid #fff;
+            border-right: 10px solid transparent;
+            z-index: 100;
+        }
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+<foreach name="data" item="vo">
+    {$vo.text}
+</foreach>
+<div class="bubbleDiv">
+    <foreach name="data" item ="vo">
+        <?php if($vo['send_id'] == $id) {?>
+
+            <div class="bubbleItem">
+                <?=$name?>
+                <span class="bubble leftBubble">
+                    <?=$vo['text']?>
+                    <span class="bottomLevel"></span>
+                    <span class="topLevel"></span>
+                </span>
+            </div>
+
+        <?php } else {?>
+            <div class="bubbleItem clearfix">   <span style="font-family: Arial, Helvetica, sans-serif;"><!--右侧的泡泡--></span>
+                <span class="bubble rightBubble">
+                    <?=$vo['text']?>
+                    <span class="bottomLevel"></span>
+                    <span class="topLevel"></span>
+                </span>
+            </div>
+        <?php } ?>
+    </foreach>
+
+
+</div>
+
+<div class="content-box-content">
+    <div class="tab-content default-tab" id="tab1">
+        <!-- This is the target div. id must match the href of this div's tab -->
+        <p>
+            <input type="hidden" name="id" value="<{$data.id}>">
+
+            <form action="__APP__/Admin/Message/send" method="post">
+                <fieldset>
+                    <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+        <p>
+            <input type="hidden" name="id" value="{$id}">
+            <input class="text-input small-input" type="text" id="text" name="text" value="" style="height: 50px; width: 400px; margin-left: 100px;"/>
+        </p>
+
+        <p>
+            <input class="button" type="submit" value="发送"  style="margin-left: 150px"/>
+        </p>
+        </fieldset>
+        <div class="clear"></div>
+        <!-- End .clear -->
+        </form>
+
+    </div>
+
+    <!-- End #tab2 -->
+</div>
+
+</body>
+</html>
